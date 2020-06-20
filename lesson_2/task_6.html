@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="task_5.js">
+    </script>
+    <script>
+         function mathOperation(arg1, arg2, operation) {
+             switch (operation) {
+                 case 'сложить':
+                     return sum(arg1, arg2);
+                 case 'вычесть':
+                     return sub(arg1, arg2);
+                 case 'умножить':
+                     return mul(arg1, arg2);
+                 case 'делить':
+                     return dev(arg1, arg2);
+
+             }
+         }
+
+         alert(mathOperation(5, 2, "умножить"));
+         
+    </script>
+</body>
+</html>
