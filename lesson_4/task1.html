@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function MagicInteger(num) {
+           if (Number.isInteger(num)) {
+               if (num < 0 || num > 999) {
+                   console.log("Число находится за пределами диапазона");
+               } else {
+                   // Все хорошо создаем поля
+                   this.hundreds = Math.floor(num / 100);
+                   this.tens = Math.floor((num % 100) / 10);
+                   this.units = num - this.hundreds * 100 - this.tens * 10;
+               }
+           } else {
+               console.log("Передано не число)");
+           }  
+        }
+
+        const my_obj = new MagicInteger(543);
+        console.log(my_obj);
+    </script>
+</body>
+</html>
