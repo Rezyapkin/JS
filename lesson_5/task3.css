@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-window {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    border: 1px solid gray;
+    padding: 50px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    transform: scale(0);
+    transform-origin: left top;
+    transition: .5s all;
+}
+
+.show-modal {
+    transform: scale(1);
+}
+
+.close-button {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+    transition: .5s all;
+    transform: rotate(45deg);
+}
+
+.close-button:hover {
+    transform: rotate(225deg);
+}
+
+.close-button::after,
+.close-button::before {
+    display: block;
+    position: absolute;
+    content: ' ';
+    width: 20px;
+    height: 20px;
+}
+
+.close-button::before {
+    top: 10px;
+    right: 0px;
+    border-top: 1px solid gray;
+}
+
+.close-button::after {
+     right: 10px;
+     top: 0px;
+     border-right: 1px solid gray;
+}
